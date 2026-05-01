@@ -154,22 +154,22 @@ The frontend will run at `http://localhost:5173`
 ## Screenshots
 
 ### 🏠 Landing Page
-![Landing Page](screenshots/screenshot-landing.png)
+![Landing Page](https://raw.githubusercontent.com/adursh/hisabkitab/main/screenshots/screenshot-landing.png)
 
 ### 🔐 Login
-![Login Page](screenshots/screenshot-login.png)
+![Login Page](https://raw.githubusercontent.com/adursh/hisabkitab/main/screenshots/screenshot-login.png)
 
 ### 📝 Registration (3-Step Flow)
-![Register Page](screenshots/screenshot-register.png)
+![Register Page](https://raw.githubusercontent.com/adursh/hisabkitab/main/screenshots/screenshot-register.png)
 
-### 📊 Dashboard — Summary & Customer List
-![Dashboard](screenshots/screenshot-dashboard.png)
+### 📊 Dashboard
+![Dashboard](https://raw.githubusercontent.com/adursh/hisabkitab/main/screenshots/screenshot-dashboard.png)
 
 ### 💸 Party Ledger — Transaction Bubbles
-![Transaction View](screenshots/screenshot-transaction.png)
+![Transaction View](https://raw.githubusercontent.com/adursh/hisabkitab/main/screenshots/screenshot-transaction.png)
 
 ### 📈 Reports & Summary
-![Reports Page](screenshots/screenshot-reports.png)
+![Reports Page](https://raw.githubusercontent.com/adursh/hisabkitab/main/screenshots/screenshot-reports.png)
 
 ---
 
