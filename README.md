@@ -1,20 +1,11 @@
-# HisabKitab — Digital Ledger Management App
+# HisabKitab
+### Overview
 
-A full-stack digital khata (ledger) application inspired by OkCredit, built for small business owners to track credit/debit transactions with customers and suppliers.
-
-**Live Demo:** [hisabkitab.adursh.me](http://hisabkitab.adursh.me)
-
----
-
-## Overview
-
-**HisabKitab** (Hindi: *हिसाब-किताब* — "accounts and records") digitizes the traditional paper-based khata system used widely in India. Users can manage transactions with multiple parties, track outstanding dues, and maintain a clear record of who owes whom.
-
-Developed as part of **IOHE – 22CS422** at **Chitkara University Institute of Engineering & Technology**, BE-CSE, Batch 2022, Semester 8.
+**HisabKitab** (Hindi: *हिसाब-किताब* — "accounts and records") digitizes the traditional paper based khata system used widely in India. Users can manage transactions with multiple parties, track outstanding dues, and maintain a clear record of who owes whom.
 
 ---
 
-## Tech Stack
+### Tech Stack
 
 | Layer      | Technology                                              |
 |------------|---------------------------------------------------------|
@@ -26,7 +17,7 @@ Developed as part of **IOHE – 22CS422** at **Chitkara University Institute of 
 
 ---
 
-## Project Structure
+### Project Structure
 
 ```
 hisabkitab/
@@ -48,14 +39,14 @@ hisabkitab/
 
 ---
 
-## Getting Started
+### Getting Started
 
-### Prerequisites
+#### Prerequisites
 
 - Node.js v18+
 - MongoDB (local or Atlas)
 
-### Environment Variables
+#### Environment Variables
 
 Copy the example files and fill in your values:
 
@@ -66,7 +57,7 @@ cp client/.env.example client/.env
 
 Refer to `.env.example` in each directory for the required variables.
 
-### Installation
+#### Installation
 
 ```bash
 # Install backend dependencies
@@ -94,19 +85,9 @@ npm run dev
 
 ---
 
-## Screenshots
-
-| Landing | Dashboard | Transactions |
-|---------|-----------|--------------|
-| ![](./screenshots/screenshot-landing.png) | ![](./screenshots/screenshot-dashboard.png) | ![](./screenshots/screenshot-transaction.png) |
-
----
-
-## Author
-
-**Adarsh** — BE Computer Science & Engineering, Batch 2022
-Chitkara University Institute of Engineering & Technology
-
----
-
-&copy; 2026 Adarsh. All rights reserved. Unauthorized copying or redistribution is prohibited.
+<!-- ## Screenshots -->
+<!---->
+<!-- | Landing | Dashboard | Transactions | -->
+<!-- |---------|-----------|--------------| -->
+<!-- | ![](./screenshots/screenshot-landing.png) | ![](./screenshots/screenshot-dashboard.png) | ![](./screenshots/screenshot-transaction.png) | -->
+<!---->
