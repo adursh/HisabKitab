@@ -17,3 +17,6 @@ ehthumbs.db
 # Root env (docker-compose, scripts, etc.)
 .env
 .env.*
+
+
+.dockerignore
