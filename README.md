@@ -1,55 +1,28 @@
-# 📒 HisabKitab — Digital Ledger Management App
+# HisabKitab — Digital Ledger Management App
 
-> A modern, mobile-friendly digital khata (ledger) application inspired by OkCredit, enabling small business owners and individuals to track credit/debit transactions with their contacts seamlessly.
+A full-stack digital khata (ledger) application inspired by OkCredit, built for small business owners to track credit/debit transactions with customers and suppliers.
 
-🌐 **Live Demo:** [hisabkitab.adursh.me](http://hisabkitab.adursh.me)
-
----
-
-## 📌 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Environment Variables](#environment-variables)
-- [Running the Project](#running-the-project)
-- [Screenshots](#screenshots)
-- [Author](#author)
+**Live Demo:** [hisabkitab.adursh.me](http://hisabkitab.adursh.me)
 
 ---
 
 ## Overview
 
-**HisabKitab** (Hindi: *हिसाब-किताब* — meaning "accounts and records") is a full-stack web application that digitizes the traditional paper-based khata (ledger) system used widely in India. It allows users to manage financial transactions with multiple parties, track outstanding dues, and maintain a clear record of who owes whom — all in one place.
+**HisabKitab** (Hindi: *हिसाब-किताब* — "accounts and records") digitizes the traditional paper-based khata system used widely in India. Users can manage transactions with multiple parties, track outstanding dues, and maintain a clear record of who owes whom.
 
-This project was developed as part of the **Innovation and Opportunity in Higher Education (IOHE – 22CS422)** course at **Chitkara University Institute of Engineering & Technology**, BE-CSE, Batch 2022, Semester 8.
-
----
-
-## Features
-
-- 🔐 **User Authentication** — Secure JWT-based registration and login
-- 👥 **Party Management** — Add and manage multiple contacts/parties
-- 💰 **Transaction Tracking** — Log "Given" (debit) and "Received" (credit) entries per party
-- 🧾 **Running Balance** — Auto-calculated net balance for each party
-- 📱 **WhatsApp-style UI** — Transaction bubbles with color-coded debit (red) / credit (green) display
-- 📊 **Dashboard Overview** — Summary of total outstanding dues across all parties
-- 🔍 **Search** — Quickly find parties by name
-- 📅 **Transaction History** — Date-wise chronological log per party
+Developed as part of **IOHE – 22CS422** at **Chitkara University Institute of Engineering & Technology**, BE-CSE, Batch 2022, Semester 8.
 
 ---
 
 ## Tech Stack
 
-| Layer      | Technology                        |
-|------------|-----------------------------------|
-| Frontend   | React.js (Vite), CSS              |
-| Backend    | Node.js, Express.js               |
-| Database   | MongoDB (Mongoose ODM)            |
-| Auth       | JWT (JSON Web Tokens), bcrypt     |
-| Deployment | Custom domain — hisabkitab.adursh.me |
+| Layer      | Technology                                              |
+|------------|---------------------------------------------------------|
+| Frontend   | React 18 (Vite), Tailwind CSS, React Router v7, Day.js |
+| Backend    | Node.js, Express.js                                     |
+| Database   | MongoDB (Mongoose ODM)                                  |
+| Auth       | JWT (JSON Web Tokens)                                   |
+| Deployment | Vercel (frontend), custom domain                        |
 
 ---
 
@@ -57,25 +30,20 @@ This project was developed as part of the **Innovation and Opportunity in Higher
 
 ```
 hisabkitab/
-├── client/                  # React + Vite frontend
-│   ├── public/
+├── client/
 │   └── src/
-│       ├── components/      # Reusable UI components
-│       ├── pages/           # Route-level pages (Login, Dashboard, Party)
-│       ├── context/         # Auth context / global state
-│       ├── api/             # Axios API call helpers
-│       └── App.jsx
+│       ├── components/       # AddCustomer, Transact, EditTransact
+│       ├── contexts/         # UserContext (global auth state)
+│       └── pages/            # Home, Login, Register, Dashboard,
+│                             # CustomerView, SupplierView, Reports, Settings
 │
-├── server/                  # Node.js + Express backend
-│   ├── models/              # Mongoose schemas (User, Party, Transaction)
-│   ├── routes/              # Express route handlers
-│   ├── middleware/          # JWT auth middleware
-│   ├── controllers/         # Business logic
-│   └── server.js
-│
-├── .env.example             # Environment variable template
-├── README.md
-└── package.json
+└── server/
+    └── src/
+        ├── config/           # MongoDB connection
+        ├── controllers/      # auth, customer, transaction logic
+        ├── middleware/        # JWT auth
+        ├── models/           # User, Customer, Transaction, Record
+        └── routes/           # auth, customer, transaction routes
 ```
 
 ---
@@ -84,42 +52,21 @@ hisabkitab/
 
 ### Prerequisites
 
-Make sure you have the following installed:
+- Node.js v18+
+- MongoDB (local or Atlas)
 
-- [Node.js](https://nodejs.org/) (v18 or above)
-- [MongoDB](https://www.mongodb.com/) (local or Atlas cloud instance)
-- [Git](https://git-scm.com/)
+### Environment Variables
 
-### Clone the Repository
+Copy the example files and fill in your values:
 
 ```bash
-git clone https://github.com/<your-username>/hisabkitab.git
-cd hisabkitab
+cp server/.env.example server/.env
+cp client/.env.example client/.env
 ```
 
----
+Refer to `.env.example` in each directory for the required variables.
 
-## Environment Variables
-
-Create a `.env` file in the `server/` directory based on `.env.example`:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret_key
-```
-
-Create a `.env` file in the `client/` directory:
-
-```env
-VITE_API_BASE_URL=http://localhost:5000/api
-```
-
----
-
-## Running the Project
-
-### 1. Install Dependencies
+### Installation
 
 ```bash
 # Install backend dependencies
@@ -131,59 +78,35 @@ cd ../client
 npm install
 ```
 
-### 2. Start the Backend Server
+### Running the Project
 
 ```bash
+# Start the backend server
 cd server
-npm run dev
-```
+npm run start
+# Runs at http://localhost:5000
 
-The backend will run at `http://localhost:5000`
-
-### 3. Start the Frontend
-
-```bash
+# Start the frontend (in a separate terminal)
 cd client
 npm run dev
+# Runs at http://localhost:5173
 ```
-
-The frontend will run at `http://localhost:5173`
 
 ---
 
 ## Screenshots
 
-### 🏠 Landing Page
-![Landing Page](https://raw.githubusercontent.com/adursh/hisabkitab/main/Screenshots/screenshot-landing.png)
-
-### 🔐 Login
-![Login Page](https://raw.githubusercontent.com/adursh/hisabkitab/main/Screenshots/screenshot-login.png)
-
-### 📝 Registration (3-Step Flow)
-![Register Page](https://raw.githubusercontent.com/adursh/hisabkitab/main/Screenshots/screenshot-register.png)
-
-### 📊 Dashboard
-![Dashboard](https://raw.githubusercontent.com/adursh/hisabkitab/main/Screenshots/screenshot-dashboard.png)
-
-### 💸 Party Ledger — Transaction Bubbles
-![Transaction View](https://raw.githubusercontent.com/adursh/hisabkitab/main/Screenshots/screenshot-transaction.png)
-
-### 📈 Reports & Summary
-![Reports Page](https://raw.githubusercontent.com/adursh/hisabkitab/main/Screenshots/screenshot-reports.png)
+| Landing | Dashboard | Transactions |
+|---------|-----------|--------------|
+| ![](./screenshots/screenshot-landing.png) | ![](./screenshots/screenshot-dashboard.png) | ![](./screenshots/screenshot-transaction.png) |
 
 ---
 
 ## Author
 
-**Adarsh**
-BE – Computer Science & Engineering, Batch 2022
+**Adarsh** — BE Computer Science & Engineering, Batch 2022
 Chitkara University Institute of Engineering & Technology
 
 ---
 
-## License
-
-This project is the intellectual property of the author. Unauthorized copying, redistribution, or commercial use without explicit permission is prohibited.
-
-© 2026 Adarsh. All rights reserved.
-```
+&copy; 2026 Adarsh. All rights reserved. Unauthorized copying or redistribution is prohibited.
