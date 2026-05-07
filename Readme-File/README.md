@@ -21,20 +21,26 @@
 
 ```
 hisabkitab/
-├── client/
-│   └── src/
-│       ├── components/       # AddCustomer, Transact, EditTransact
-│       ├── contexts/         # UserContext (global auth state)
-│       └── pages/            # Home, Login, Register, Dashboard,
-│                             # CustomerView, SupplierView, Reports, Settings
-│
-└── server/
-    └── src/
-        ├── config/           # MongoDB connection
-        ├── controllers/      # auth, customer, transaction logic
-        ├── middleware/        # JWT auth
-        ├── models/           # User, Customer, Transaction, Record
-        └── routes/           # auth, customer, transaction routes
+├── IPR-Submission-Proof/
+├── Report-and-PPT/
+│   ├── HisabKitab_Report.docx
+│   └── HisabKitab_Presentation.pptx
+├── Readme-File/
+│   └── README.md
+└── Source-Code/
+    ├── client/
+    │   └── src/
+    │       ├── components/       # AddCustomer, Transact, EditTransact
+    │       ├── contexts/         # UserContext (global auth state)
+    │       └── pages/            # Home, Login, Register, Dashboard,
+    │                             # CustomerView, SupplierView, Reports, Settings
+    └── server/
+        └── src/
+            ├── config/           # MongoDB connection
+            ├── controllers/      # auth, customer, transaction logic
+            ├── middleware/       # JWT auth
+            ├── models/           # User, Customer, Transaction, Record
+            └── routes/           # auth, customer, transaction routes
 ```
 
 ---
@@ -51,16 +57,18 @@ hisabkitab/
 Copy the example files and fill in your values:
 
 ```bash
-cp server/.env.example server/.env
-cp client/.env.example client/.env
+cd Source-Code
+cp server/server.env.example server/.env
+cp client/client.env.example client/.env
 ```
 
-Refer to `.env.example` in each directory for the required variables.
+Refer to the example environment files in each directory for the required variables.
 
 #### Installation
 
 ```bash
 # Install backend dependencies
+cd Source-Code
 cd server
 npm install
 
@@ -73,12 +81,12 @@ npm install
 
 ```bash
 # Start the backend server
-cd server
+cd Source-Code/server
 npm run start
 # Runs at http://localhost:5000
 
 # Start the frontend (in a separate terminal)
-cd client
+cd Source-Code/client
 npm run dev
 # Runs at http://localhost:5173
 ```
