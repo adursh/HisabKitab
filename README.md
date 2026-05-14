@@ -24,23 +24,25 @@ hisabkitab/
 ├── IPR-Submission-Proof/
 ├── Report-and-PPT/
 │   ├── HisabKitab_Report.docx
-│   └── HisabKitab_Presentation.pptx
-├── Readme-File/
-│   └── README.md
-└── Source-Code/
-    ├── client/
-    │   └── src/
-    │       ├── components/       # AddCustomer, Transact, EditTransact
-    │       ├── contexts/         # UserContext (global auth state)
-    │       └── pages/            # Home, Login, Register, Dashboard,
-    │                             # CustomerView, SupplierView, Reports, Settings
-    └── server/
-        └── src/
-            ├── config/           # MongoDB connection
-            ├── controllers/      # auth, customer, transaction logic
-            ├── middleware/       # JWT auth
-            ├── models/           # User, Customer, Transaction, Record
-            └── routes/           # auth, customer, transaction routes
+│   ├── HisabKitab_Report.pdf
+│   ├── HisabKitab_Presentation.pptx
+│   └── HisabKitab_Presentation.pdf
+├── Screenshots/
+├── Source-Code/
+│   ├── client/
+│   │   └── src/
+│   │       ├── components/       # AddCustomer, Transact, EditTransact
+│   │       ├── contexts/         # UserContext (global auth state)
+│   │       └── pages/            # Home, Login, Register, Dashboard,
+│   │                             # CustomerView, SupplierView, Reports, Settings
+│   └── server/
+│       └── src/
+│           ├── config/           # MongoDB connection
+│           ├── controllers/      # auth, customer, transaction logic
+│           ├── middleware/       # JWT auth
+│           ├── models/           # User, Customer, Transaction, Record
+│           └── routes/           # auth, customer, transaction routes
+└── README.md
 ```
 
 ---
@@ -97,5 +99,5 @@ npm run dev
 <!---->
 <!-- | Landing | Dashboard | Transactions | -->
 <!-- |---------|-----------|--------------| -->
-<!-- | ![](./screenshots/screenshot-landing.png) | ![](./screenshots/screenshot-dashboard.png) | ![](./screenshots/screenshot-transaction.png) | -->
+<!-- | ![](./Screenshots/screenshot-landing.png) | ![](./Screenshots/screenshot-dashboard.png) | ![](./Screenshots/screenshot-transaction.png) | -->
 <!---->
