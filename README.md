@@ -95,9 +95,8 @@ npm run dev
 
 ---
 
-<!-- ## Screenshots -->
-<!---->
-<!-- | Landing | Dashboard | Transactions | -->
-<!-- |---------|-----------|--------------| -->
-<!-- | ![](./Screenshots/screenshot-landing.png) | ![](./Screenshots/screenshot-dashboard.png) | ![](./Screenshots/screenshot-transaction.png) | -->
-<!---->
+## Screenshots
+
+| Landing | Dashboard | Transactions |
+|---------|-----------|--------------|
+| ![Landing](./Screenshots/screenshot-landing.png) | ![Dashboard](./Screenshots/screenshot-dashboard.png) | ![Transactions](./Screenshots/screenshot-transaction.png) |
